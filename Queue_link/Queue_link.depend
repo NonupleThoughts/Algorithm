@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1506739284 source:/home/linux/Github/Algorithm/Queue_link/main.c
+	"stdio.h"
+	"stdlib.h"
+
