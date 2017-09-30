@@ -1,5 +1,13 @@
 # depslib dependency file v1.0
-1506739284 source:/home/linux/Github/Algorithm/Queue_link/main.c
+1506740683 source:/home/linux/Github/Algorithm/Queue_link/main.c
 	"stdio.h"
 	"stdlib.h"
+	"Queue_link.h"
+
+1506740609 /home/linux/Github/Algorithm/Queue_link/Queue_link.h
+	"stdio.h"
+	"stdlib.h"
+
+1506740653 source:/home/linux/Github/Algorithm/Queue_link/Queue_link.c
+	"Queue_link.h"
 
