@@ -1,3 +1,10 @@
+/*
+* Implement a Stack with resizing array
+*
+* By Cong
+* 2017/10/17
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "Stack_array.h"
