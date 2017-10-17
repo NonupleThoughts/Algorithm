@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1508212502 source:/home/linux/Github/Algorithm/BasicDataStruct/Stack_array/Stack_array.c
+	"Stack_array.h"
+
+1508208921 /home/linux/Github/Algorithm/BasicDataStruct/Stack_array/Stack_array.h
+	"stdio.h"
+	"stdlib.h"
+
+1508212528 source:/home/linux/Github/Algorithm/BasicDataStruct/Stack_array/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Stack_array.h"
+
