@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1508746240 source:/home/linux/Github/Algorithm/BasicDataStruct/Stack_link/main.c
+	"stdio.h"
+	"stdlib.h"
+	"Stack_link.h"
+
+1508746240 /home/linux/Github/Algorithm/BasicDataStruct/Stack_link/Stack_link.h
+	"stdio.h"
+	"stdlib.h"
+
+1508212964 source:/home/linux/Github/Algorithm/BasicDataStruct/Stack_link/Stack_link.c
+	"Stack_link.h"
+
