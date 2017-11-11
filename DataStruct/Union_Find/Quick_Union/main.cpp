@@ -63,7 +63,7 @@ void UF::UFunion(int p, int q)
     int p_id = UFfind(p);
     int q_id = UFfind(q);
     if(p_id != q_id)
-        id[q_id] = p;
+        id[q_id] = p;                            //this will add q tree to p tree
 }
 
 void UF::UFdetail()
