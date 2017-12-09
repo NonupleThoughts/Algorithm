@@ -1,6 +1,6 @@
 Those file is implementation of MergeSort which uses recursion to achieve it.
 
-And for more detail about MergeSor, please go to wiki.
+And for more detail about MergeSort, please go to wiki.
 
 
 /****************************************************************/
