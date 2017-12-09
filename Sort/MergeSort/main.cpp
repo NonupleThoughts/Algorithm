@@ -1,5 +1,5 @@
 /*
-*   This is implementation for Quick_Union which uses recursion to achieve it.
+*   This is implementation for MergeSort which uses recursion to achieve it.
 *   Wrote by Cong
 *   2017.12.6
 */
