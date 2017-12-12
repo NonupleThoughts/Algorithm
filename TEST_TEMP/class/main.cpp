@@ -14,10 +14,10 @@ int main()
 {
 //    string a = "helloworld";
 //    cout << a << endl;
-    person a;
-    a.set_name("wang er");
-    a.set_age(18);
-    a.set_phone(1123);
+    teacher a("wang er", 18, 1123, "3123123");
+    //a.set_name("wang er");
+    //a.set_age(18);
+    //a.set_phone(1123);
     a.show_info();
     return 0;
 }
