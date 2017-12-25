@@ -50,6 +50,8 @@ public:
     node<datatype>* show_data(int pos);
     int             show_size();
     void            show_all();
+    void            insertsort();
+    void            reset();
     ~linked_list();
 
 protected:
@@ -324,14 +326,50 @@ void linked_list<datatype>::show_all()
 */
 }
 
-
+//by default the data will be arranged from small to large
 template <class datatype>
-inline linked_list<datatype>::~linked_list()
+void linked_list<datatype>::insertsort()
+{
+    int count_i = 0;
+    int count_sort = 0;
+    node<datatype> *sort_pos = head.rear;
+    node<datatype> *temp     = head.rear;     //"temp" always points to the first element
+    node<datatype> cache;
+    for(count_sort = 1; count_sort <= size; count_sort += 1)
+    {
+        for(count_i = 1; count_i < count_sort; count_i += 1)
+        {
+            if(sort_pos->data < temp->data)
+            {
+                //move sort_pos to the postion before temp
+                sort_pos->front->rear = sort_pos->rear;
+                sort_pos->rear->front = sort_pos->front;
+
+                sort_pos->rear  = temp;
+                sort_pos->front = temp->front;
+ 
+                temp->front->rear = sort_pos;
+                temp->front = sort_pos;
+
+                break;
+            }
+            temp = temp->rear;
+        }
+
+        sort_pos = sort_pos->rear;
+        temp     = head.rear;
+    }
+}
+
+//in this function all the element in linked list will be delete
+//and all codes in this function are the same as the codes in destructor
+template <class datatype>
+void linked_list<datatype>::reset()
 {
     //when free the memory,
     //there may need a pointer to save the address of next memory which is contained by the current memory,
     //so there need two temp pointer.
-    node<datatype> *temp1 = head.rear;        //ponit to the current memory
+    node<datatype> *temp1 = head.rear;        //point to the current memory
     node<datatype> *temp2 = temp1->rear;      //point to the next memory
     for(int count_i = 0; count_i < size; count_i += 1)
     {
@@ -339,6 +377,24 @@ inline linked_list<datatype>::~linked_list()
         temp1 = temp2;
         temp2 = temp1->rear;
     }
+    size = 0;
+}
+
+template <class datatype>
+inline linked_list<datatype>::~linked_list()
+{
+    //when free the memory,
+    //there may need a pointer to save the address of next memory which is contained by the current memory,
+    //so there need two temp pointer.
+    node<datatype> *temp1 = head.rear;        //point to the current memory
+    node<datatype> *temp2 = temp1->rear;      //point to the next memory
+    for(int count_i = 0; count_i < size; count_i += 1)
+    {
+        delete temp1;
+        temp1 = temp2;
+        temp2 = temp1->rear;
+    }
+    size = 0;
 }
 
 #endif  //_LINKED_LIST_H_

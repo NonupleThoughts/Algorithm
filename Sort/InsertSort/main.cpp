@@ -11,8 +11,28 @@ using namespace std;
 
 int main()
 {
-/*******the following codes are used for testing linked_list***************/
     int temp;
+    linked_list<int> aaaaaa;
+    temp = 3;
+    aaaaaa.add(temp);
+    temp = 3;
+    aaaaaa.add(temp);
+    temp = 2;
+    aaaaaa.add(temp);
+    temp = 5;
+    aaaaaa.add(temp);
+    temp = 7;
+    aaaaaa.add(temp);
+    aaaaaa.show_all();
+    aaaaaa.insertsort();
+    aaaaaa.show_all();
+    aaaaaa.reset();
+    aaaaaa.show_all();
+    aaaaaa.add(temp);
+    aaaaaa.show_all();
+    cout << endl;
+/*******the following codes are used for testing linked_list***************/
+//    int temp;
     linked_list<int> a;
     //add
     cout << "add 10 element" << endl;
