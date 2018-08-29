@@ -1,9 +1,0 @@
-
-链接：https://leetcode.com/problems/regular-expression-matching/description/
-
-这道题目描述的很模糊
-首先
-'*' Matches zero or more of the preceding element.
-这句话表述的意思是'*'可以重复之前的一个字母0次或者更多次，而且它可以令之前的字母不存在，比如input："aa" "aab*" 结果应当是true
-The matching should cover the entire input string (not partial).
-这句话表述的是完全匹配，即s=p，因此，input： "ab" ".*c"的结果是错的
