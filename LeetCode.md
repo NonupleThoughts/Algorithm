@@ -1,4 +1,7 @@
-这道题目描述的有些模糊
+刷lLeetCode时的相关笔记
+
+
+[这道题目（10. Regular Expression Matching）](https://leetcode.com/problems/regular-expression-matching/description/)描述的有些模糊
 
 首先
 ```
@@ -12,6 +15,9 @@ The matching should cover the entire input string (not partial).
 这句话表述的是完全匹配，即s=p，因此，input: "ab" ".\*c"的结果是错的
 
 这道题没有想到解法，最初的想法是直接遍历比较，当遇到'\.'以及'\*'时，单独处理，前者还好说，但后者，不好判定，比如说是input: "aaa" "a\*a"以及input: "bbbba" ".\*a\*a"这种情况时，无法判定'\*'表述的含义（是重复还是去除，重复的话，要重复多少次），这里打算先看看解法，之后在自己实现一遍
+
+解法一解法二应当都是遍历，只不过它遍历的方法比较巧妙，解法一利用递归来求解判断，思路很清晰，解法二应当是解法一的逆过程，牵扯到了[动态规划](https://en.wikipedia.org/wiki/Dynamic_programming)（有时间好好了解一下），能看懂代码，不过不知道为什么是这个样子的，可能把解法一实现之后才能有比较好的理解吧
+
 临时想到了一个思路
 按照我之前的思路，问题出在‘\*上面，那么是否可以先查找所有的'\*'，对每个'\*'单独处理，判断它是重复还是清除之前的元素，这样不知道结果会是怎么样
 这个想法暂时留在这里，等看完官方给的解法之后在做详细思考
